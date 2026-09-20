@@ -1,9 +1,10 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box; 
 }
 
-header{
+header {
     padding:20px;
     margin-bottom:24px;
     background-color: gray;
@@ -11,7 +12,7 @@ header{
     color:white;
 }
 
-footer{
+footer {
     padding:20px;
     margin-top:24px;
     background-color: black;
@@ -19,8 +20,17 @@ footer{
     color:white;
 }
 
-@media(min-width:768px){
-    article{
+/* I assume this is how we should be setting up Mobile-First Base Styles?
+We weren't taught how to do this in the lab's walk-along coding session. */
+@media (max-width:767px) {
+    article {
+        width:100%;
+        margin-bottom:16px;
+    }
+}
+
+@media (min-width:768px) {
+    article {
         display:inline-block;
         width:30%;
         margin-right: 3%;
